@@ -1,0 +1,61 @@
+[2024-10-17 21:47:50] local.INFO: Iniciando el proceso de revisión de correos de los últimos 10 minutos.  
+[2024-10-17 21:47:51] local.INFO: Conexión al servidor IMAP exitosa.  
+[2024-10-17 21:47:51] local.INFO: Obteniendo mensajes no leídos desde los últimos 10 minutos: 2024-10-17 21:37:51  
+[2024-10-17 21:48:06] local.INFO: Número de mensajes no leídos encontrados: 28  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 08:15:48  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 09:06:18  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 09:57:41  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 04:26:38  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 04:51:23  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 13:09:14  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 09:59:14  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 15:32:41  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 15:44:29  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 10:06:19  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 10:09:50  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 17:06:03  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 10:06:04  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 17:31:53  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 12:20:16  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 19:50:18  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 20:45:01  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 15:17:31  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 15:18:00  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 15:18:21  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 15:19:22  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 15:21:07  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 15:33:33  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 15:09:14  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 14:43:00  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 14:43:26  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 14:45:07  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Revisando mensaje recibido en: 2024-10-17 15:46:20  
+[2024-10-17 21:48:06] local.INFO: El mensaje no está dentro de los últimos 10 minutos.  
+[2024-10-17 21:48:06] local.INFO: Desconexión del servidor IMAP completada.  

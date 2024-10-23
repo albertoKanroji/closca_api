@@ -1,0 +1,251 @@
+{
+    "inspecciones": [
+      {
+        "auto": {
+          "Unidad": {
+            "id_auto": 31678,
+            "vin": "LGWEE5A59SK608189",
+            "f_ingreso": "2024-10-01",
+            "f_salida": null,
+            "id_cliente": 4,
+            "id_contacto": null,
+            "id_marca": 6,
+            "modelo": "67",
+            "color": null,
+            "color_ext": null,
+            "lavado_presion": "0",
+            "voltajeBateria": "12.59",
+            "barco": null,
+            "modelo_ext": null,
+            "dealer": "",
+            "firma": null
+          },
+          "UBICACION": {
+            "pais_destino": null,
+            "id_patio": null,
+            "fila": null,
+            "viaje": null,
+            "posicion": null,
+            "_localizacion": null,
+            "referencia": ""
+          },
+          "DMG": {
+            "dmg_codigo": null,
+            "dmg_clasificacion": null,
+            "dmg_descripcion": null,
+            "dmg_modo": null,
+            "dmg_maniobra": null,
+            "dmg_transporte": null,
+            "dmg_responsable": null
+          },
+          "REPUVE": {
+            "rep_reparable": null,
+            "rep_responsable": null,
+            "rep_fecha_autorizacion": null,
+            "rep_fecha_liberacion": null,
+            "rep_dias": null,
+            "rep_orden_servicio": null,
+            "rep_requiere_partes": null,
+            "rep_fecha_orden_partes": null,
+            "rep_control_pedido": null,
+            "rep_fecha_entrega_partes": null,
+            "rep_fecha_termino": null,
+            "rep_estado": null,
+            "rep_comentarios": null,
+            "rep_sitio": null
+          },
+          "ACCESORIOS": {
+            "ac_llave_tarjeta": null,
+            "ac_tarjeta_memoria": null,
+            "ac_7KW_charger": null,
+            "ac_chaleco_reflectante": null,
+            "ac_triangulo_adv": null,
+            "ac_montaje_gato": null,
+            "ac_gancho_remolque": null,
+            "ac_gancho_traccion": null,
+            "ac_llave_inteligente": null,
+            "ac_pinza_desmontaje_dec": null,
+            "ac_red_neumatico": null,
+            "ac_limpiaparabrisas_izq": null,
+            "ac_llave_inglesa": null,
+            "ac_cierre": null,
+            "ac_limpiaparabrisas_der": null,
+            "ac_clips_decorativos": null,
+            "ac_manual_usuario": null,
+            "ac_barra_remota_gato": null
+          },
+          "COMENTARIOS": {
+            "comentario_1": "",
+            "comentario_2": "",
+            "comentario_3": ""
+          }
+        },
+        "imagenes": null
+      },
+      {
+        "auto": {
+          "Unidad": {
+            "id_auto": 31679,
+            "vin": "1HGCM82633A123456",
+            "f_ingreso": "2024-09-25",
+            "f_salida": null,
+            "id_cliente": 5,
+            "id_contacto": null,
+            "id_marca": 7,
+            "modelo": "Accord",
+            "color": null,
+            "color_ext": null,
+            "lavado_presion": "1",
+            "voltajeBateria": "12.40",
+            "barco": null,
+            "modelo_ext": null,
+            "dealer": "",
+            "firma": null
+          },
+          "UBICACION": {
+            "pais_destino": null,
+            "id_patio": null,
+            "fila": null,
+            "viaje": null,
+            "posicion": null,
+            "_localizacion": null,
+            "referencia": ""
+          },
+          "DMG": {
+            "dmg_codigo": null,
+            "dmg_clasificacion": null,
+            "dmg_descripcion": null,
+            "dmg_modo": null,
+            "dmg_maniobra": null,
+            "dmg_transporte": null,
+            "dmg_responsable": null
+          },
+          "REPUVE": {
+            "rep_reparable": null,
+            "rep_responsable": null,
+            "rep_fecha_autorizacion": null,
+            "rep_fecha_liberacion": null,
+            "rep_dias": null,
+            "rep_orden_servicio": null,
+            "rep_requiere_partes": null,
+            "rep_fecha_orden_partes": null,
+            "rep_control_pedido": null,
+            "rep_fecha_entrega_partes": null,
+            "rep_fecha_termino": null,
+            "rep_estado": null,
+            "rep_comentarios": null,
+            "rep_sitio": null
+          },
+          "ACCESORIOS": {
+            "ac_llave_tarjeta": null,
+            "ac_tarjeta_memoria": null,
+            "ac_7KW_charger": null,
+            "ac_chaleco_reflectante": null,
+            "ac_triangulo_adv": null,
+            "ac_montaje_gato": null,
+            "ac_gancho_remolque": null,
+            "ac_gancho_traccion": null,
+            "ac_llave_inteligente": null,
+            "ac_pinza_desmontaje_dec": null,
+            "ac_red_neumatico": null,
+            "ac_limpiaparabrisas_izq": null,
+            "ac_llave_inglesa": null,
+            "ac_cierre": null,
+            "ac_limpiaparabrisas_der": null,
+            "ac_clips_decorativos": null,
+            "ac_manual_usuario": null,
+            "ac_barra_remota_gato": null
+          },
+          "COMENTARIOS": {
+            "comentario_1": "",
+            "comentario_2": "",
+            "comentario_3": ""
+          }
+        },
+        "imagenes": null
+      },
+      {
+        "auto": {
+          "Unidad": {
+            "id_auto": 31680,
+            "vin": "WVWZZZ1JZXW123456",
+            "f_ingreso": "2024-08-15",
+            "f_salida": null,
+            "id_cliente": 6,
+            "id_contacto": null,
+            "id_marca": 8,
+            "modelo": "Golf",
+            "color": null,
+            "color_ext": null,
+            "lavado_presion": "0",
+            "voltajeBateria": "12.80",
+            "barco": null,
+            "modelo_ext": null,
+            "dealer": "",
+            "firma": null
+          },
+          "UBICACION": {
+            "pais_destino": null,
+            "id_patio": null,
+            "fila": null,
+            "viaje": null,
+            "posicion": null,
+            "_localizacion": null,
+            "referencia": ""
+          },
+          "DMG": {
+            "dmg_codigo": null,
+            "dmg_clasificacion": null,
+            "dmg_descripcion": null,
+            "dmg_modo": null,
+            "dmg_maniobra": null,
+            "dmg_transporte": null,
+            "dmg_responsable": null
+          },
+          "REPUVE": {
+            "rep_reparable": null,
+            "rep_responsable": null,
+            "rep_fecha_autorizacion": null,
+            "rep_fecha_liberacion": null,
+            "rep_dias": null,
+            "rep_orden_servicio": null,
+            "rep_requiere_partes": null,
+            "rep_fecha_orden_partes": null,
+            "rep_control_pedido": null,
+            "rep_fecha_entrega_partes": null,
+            "rep_fecha_termino": null,
+            "rep_estado": null,
+            "rep_comentarios": null,
+            "rep_sitio": null
+          },
+          "ACCESORIOS": {
+            "ac_llave_tarjeta": null,
+            "ac_tarjeta_memoria": null,
+            "ac_7KW_charger": null,
+            "ac_chaleco_reflectante": null,
+            "ac_triangulo_adv": null,
+            "ac_montaje_gato": null,
+            "ac_gancho_remolque": null,
+            "ac_gancho_traccion": null,
+            "ac_llave_inteligente": null,
+            "ac_pinza_desmontaje_dec": null,
+            "ac_red_neumatico": null,
+            "ac_limpiaparabrisas_izq": null,
+            "ac_llave_inglesa": null,
+            "ac_cierre": null,
+            "ac_limpiaparabrisas_der": null,
+            "ac_clips_decorativos": null,
+            "ac_manual_usuario": null,
+            "ac_barra_remota_gato": null
+          },
+          "COMENTARIOS": {
+            "comentario_1": "",
+            "comentario_2": "",
+            "comentario_3": ""
+          }
+        },
+        "imagenes": null
+      }
+    ]
+  }
+  
