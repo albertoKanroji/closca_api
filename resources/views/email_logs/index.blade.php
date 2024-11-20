@@ -20,9 +20,10 @@
         <tr>
             <th>No.</th>
             <th>ID Auto</th>
+            <th>Marca</th>
             <th>VIN</th>
             <th>Fecha Ingreso</th>
-            <th>Fecha Salida</th>
+            <th>Status</th>
             <th>Modelo</th>
         </tr>
         </thead>
@@ -31,9 +32,10 @@
             <tr>
                 <td>{{ $index + 1 }}</td>
                 <td>{{ $log->id_auto }}</td>
+                <td>{{ $log->id_marca }}</td>
                 <td>{{ $log->vin }}</td>
                 <td>{{ $log->f_ingreso }}</td>
-                <td>{{ $log->f_salida }} </td>
+                <td>Recivido </td>
                 <td>{{ $log->modelo }}</td>
             </tr>
         @endforeach
