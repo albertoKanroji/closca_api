@@ -19,22 +19,22 @@
         <thead>
         <tr>
             <th>No.</th>
-            <th>Correo del remitente</th>
-            <th>Fecha de recepción</th>
-            <th>Nombre del archivo</th>
-            <th>Tamaño del archivo</th>
-            <th>Clave</th>
+            <th>ID Auto</th>
+            <th>VIN</th>
+            <th>Fecha Ingreso</th>
+            <th>Fecha Salida</th>
+            <th>Modelo</th>
         </tr>
         </thead>
         <tbody>
         @foreach ($logs as $index => $log)
             <tr>
                 <td>{{ $index + 1 }}</td>
-                <td>{{ $log->sender_email }}</td>
-                <td>{{ $log->received_at }}</td>
-                <td>{{ $log->file_name }}</td>
-                <td>{{ number_format($log->file_size / 1024, 2) }} KB</td>
-                <td>{{ $log->key }}</td>
+                <td>{{ $log->id_auto }}</td>
+                <td>{{ $log->vin }}</td>
+                <td>{{ $log->f_ingreso }}</td>
+                <td>{{ $log->f_salida }} </td>
+                <td>{{ $log->modelo }}</td>
             </tr>
         @endforeach
         </tbody>
