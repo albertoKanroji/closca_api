@@ -13,8 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return ['Laravel' => app()->version()];
-});
+
+Route::get('/', [\App\Http\Controllers\EmailLogController::class, 'index'])->name('email.logs.index');
 
 require __DIR__.'/auth.php';
