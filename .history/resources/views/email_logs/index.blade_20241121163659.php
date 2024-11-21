@@ -87,92 +87,62 @@
 
             <!-- Buscador DMG -->
             <div id="buscador-dmg" class="tab-pane fade">
-    <h2 class="mt-4">Buscador DMG</h2>
-    <form id="dmgSearchForm" class="mb-3">
-        <div class="row g-3 align-items-center">
-            <div class="col-auto">
-                <label for="vin" class="form-label">Buscar VIN:</label>
-            </div>
-            <div class="col-auto">
-                <input type="text" id="vin" name="vin" class="form-control" placeholder="Ingrese VIN">
-            </div>
-            <div class="col-auto">
-                <button type="submit" class="btn btn-primary">Buscar</button>
-            </div>
-        </div>
-    </form>
+                <h2 class="mt-4">Buscador DMG</h2>
+                <form method="GET" action="{{ route('email.logs.index') }}" class="mb-3">
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label for="vin" class="form-label">Buscar VIN:</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" id="vin" name="vin" value="{{ $vin }}" class="form-control"
+                                placeholder="Ingrese VIN">
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary">Buscar</button>
+                        </div>
+                    </div>
+                </form>
 
-    <!-- Área para mostrar resultados -->
-    <div id="dmgResults">
-        <!-- Resultados se cargarán aquí dinámicamente -->
-    </div>
-</div>
-
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-   $(document).ready(function () {
-    $('#dmgSearchForm').on('submit', function (e) {
-        e.preventDefault();
-
-        const vin = $('#vin').val();
-
-        if (!vin) {
-            $('#dmgResults').html('<div class="alert alert-danger">Por favor, ingrese un VIN.</div>');
-            return;
-        }
-
-        $.ajax({
-            url: "{{ route('email.logs.buscar') }}",
-            method: "GET",
-            data: { vin: vin },
-            beforeSend: function () {
-                $('#dmgResults').html('<div class="spinner-border" role="status"><span class="visually-hidden">Cargando...</span></div>');
-            },
-            success: function (response) {
-                if (response.dmgDetalles && response.dmgDetalles.length > 0) {
-                    let table = `
-                        <h2 class="mt-4">Resultados para el VIN: ${response.vin}</h2>
-                        <div class="table-responsive">
-                            <table class="table table-striped table-bordered">
-                                <thead class="table-light">
-                                    <tr>
-                                        <th scope="col">ID DMG</th>
-                                        <th scope="col">Comentario</th>
-                                        <th scope="col">Código DMG</th>
-                                        <th scope="col">Creado</th>
-                                        <th scope="col">Actualizado</th>
-                                    </tr>
-                                </thead>
-                                <tbody>`;
-                    response.dmgDetalles.forEach(dmg => {
-                        table += `
+                <!-- Mostrar resultados de la búsqueda -->
+                @if(isset($vin))
+                @if(isset($error))
+                <div class="alert alert-danger" role="alert">
+                    {{ $error }}
+                </div>
+                @elseif(count($dmgDetalles) > 0)
+                <h2 class="mt-4">Resultados para el VIN: {{ $vin }}</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead class="table-light">
                             <tr>
-                                <td>${dmg.id}</td>
-                                <td>${dmg.comentario}</td>
-                                <td>${dmg.dmg_codigo}</td>
-                                <td>${dmg.created_at}</td>
-                                <td>${dmg.updated_at}</td>
-                            </tr>`;
-                    });
-                    table += `
-                                </tbody>
-                            </table>
-                        </div>`;
-                    $('#dmgResults').html(table);
-                } else {
-                    $('#dmgResults').html('<div class="alert alert-info">No se encontraron detalles de daño para el VIN ingresado.</div>');
-                }
-            },
-            error: function (xhr) {
-                const message = xhr.responseJSON ? xhr.responseJSON.error : 'Error desconocido.';
-                $('#dmgResults').html(`<div class="alert alert-danger">${message}</div>`);
-            }
-        });
-    });
-});
+                                <th scope="col">ID DMG</th>
+                                <th scope="col">Comentario</th>
+                                <th scope="col">Código DMG</th>
+                                <th scope="col">Creado</th>
+                                <th scope="col">Actualizado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($dmgDetalles as $dmg)
+                            <tr>
+                                <td>{{ $dmg->id }}</td>
+                                <td>{{ $dmg->comentario }}</td>
+                                <td>{{ $dmg->dmg_codigo }}</td>
+                                <td>{{ $dmg->created_at }}</td>
+                                <td>{{ $dmg->updated_at }}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+                @else
+                <div class="alert alert-info" role="alert">
+                    No se encontraron detalles de daño para el VIN: {{ $vin }}
+                </div>
+                @endif
+                @endif
+            </div>
 
-</script>
         </div>
     </div>
 

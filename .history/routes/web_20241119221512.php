@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\EmailLogController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', [EmailLogController::class, 'index'])->name('email.logs.index');
-Route::get('/buscar-dmg', [EmailLogController::class, 'buscarPorVin'])->name('email.logs.buscar');
+Route::get('/', [\App\Http\Controllers\EmailLogController::class, 'index'])->name('email.logs.index');
 
 require __DIR__.'/auth.php';

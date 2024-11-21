@@ -50,39 +50,5 @@ class EmailLogController extends Controller
         'vin' => null
     ]);
 }
-public function buscarPorVin(Request $request)
-{
-    // Obtener el VIN de la solicitud
-    $vin = $request->input('vin');
 
-    if (!$vin) {
-        return response()->json([
-            'error' => 'El VIN es obligatorio.'
-        ], 400);
-    }
-
-    // Buscar el auto por VIN
-    $auto = Auto::where('vin', $vin)->first();
-
-    if (!$auto) {
-        return response()->json([
-            'error' => 'No se encontró un auto con el VIN proporcionado.'
-        ], 404);
-    }
-
-    // Obtener los detalles de DMG relacionados
-    $dmgDetalles = $auto->dmgDetalles;
-
-    // Devolver los resultados como JSON
-    return response()->json([
-        'vin' => $vin,
-        'auto' => [
-            'id_auto' => $auto->id_auto,
-            'modelo' => $auto->modelo,
-            'marca' => $auto->id_marca,
-            'f_ingreso' => $auto->f_ingreso
-        ],
-        'dmgDetalles' => $dmgDetalles
-    ]);
-}
 }

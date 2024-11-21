@@ -111,67 +111,70 @@
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-   $(document).ready(function () {
-    $('#dmgSearchForm').on('submit', function (e) {
-        e.preventDefault();
+    $(document).ready(function () {
+        // Manejar el envío del formulario
+        $('#dmgSearchForm').on('submit', function (e) {
+            e.preventDefault(); // Evitar recarga de la página
 
-        const vin = $('#vin').val();
+            // Obtener el valor del VIN
+            const vin = $('#vin').val();
 
-        if (!vin) {
-            $('#dmgResults').html('<div class="alert alert-danger">Por favor, ingrese un VIN.</div>');
-            return;
-        }
-
-        $.ajax({
-            url: "{{ route('email.logs.buscar') }}",
-            method: "GET",
-            data: { vin: vin },
-            beforeSend: function () {
-                $('#dmgResults').html('<div class="spinner-border" role="status"><span class="visually-hidden">Cargando...</span></div>');
-            },
-            success: function (response) {
-                if (response.dmgDetalles && response.dmgDetalles.length > 0) {
-                    let table = `
-                        <h2 class="mt-4">Resultados para el VIN: ${response.vin}</h2>
-                        <div class="table-responsive">
-                            <table class="table table-striped table-bordered">
-                                <thead class="table-light">
-                                    <tr>
-                                        <th scope="col">ID DMG</th>
-                                        <th scope="col">Comentario</th>
-                                        <th scope="col">Código DMG</th>
-                                        <th scope="col">Creado</th>
-                                        <th scope="col">Actualizado</th>
-                                    </tr>
-                                </thead>
-                                <tbody>`;
-                    response.dmgDetalles.forEach(dmg => {
-                        table += `
-                            <tr>
-                                <td>${dmg.id}</td>
-                                <td>${dmg.comentario}</td>
-                                <td>${dmg.dmg_codigo}</td>
-                                <td>${dmg.created_at}</td>
-                                <td>${dmg.updated_at}</td>
-                            </tr>`;
-                    });
-                    table += `
-                                </tbody>
-                            </table>
-                        </div>`;
-                    $('#dmgResults').html(table);
-                } else {
-                    $('#dmgResults').html('<div class="alert alert-info">No se encontraron detalles de daño para el VIN ingresado.</div>');
-                }
-            },
-            error: function (xhr) {
-                const message = xhr.responseJSON ? xhr.responseJSON.error : 'Error desconocido.';
-                $('#dmgResults').html(`<div class="alert alert-danger">${message}</div>`);
+            if (!vin) {
+                $('#dmgResults').html('<div class="alert alert-danger">Por favor, ingrese un VIN.</div>');
+                return;
             }
+
+            // Realizar la solicitud AJAX
+            $.ajax({
+                url: "{{ route('email.logs.index') }}", // Ruta del servidor
+                method: "GET",
+                data: { vin: vin },
+                beforeSend: function () {
+                    $('#dmgResults').html('<div class="spinner-border" role="status"><span class="visually-hidden">Cargando...</span></div>');
+                },
+                success: function (response) {
+                    if (response.error) {
+                        $('#dmgResults').html(`<div class="alert alert-danger">${response.error}</div>`);
+                    } else if (response.dmgDetalles && response.dmgDetalles.length > 0) {
+                        let table = `
+                            <h2 class="mt-4">Resultados para el VIN: ${vin}</h2>
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th scope="col">ID DMG</th>
+                                            <th scope="col">Comentario</th>
+                                            <th scope="col">Código DMG</th>
+                                            <th scope="col">Creado</th>
+                                            <th scope="col">Actualizado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>`;
+                        response.dmgDetalles.forEach(dmg => {
+                            table += `
+                                <tr>
+                                    <td>${dmg.id}</td>
+                                    <td>${dmg.comentario}</td>
+                                    <td>${dmg.dmg_codigo}</td>
+                                    <td>${dmg.created_at}</td>
+                                    <td>${dmg.updated_at}</td>
+                                </tr>`;
+                        });
+                        table += `
+                                    </tbody>
+                                </table>
+                            </div>`;
+                        $('#dmgResults').html(table);
+                    } else {
+                        $('#dmgResults').html(`<div class="alert alert-info">No se encontraron detalles de daño para el VIN: ${vin}</div>`);
+                    }
+                },
+                error: function () {
+                    $('#dmgResults').html('<div class="alert alert-danger">Ocurrió un error al realizar la búsqueda. Intente nuevamente.</div>');
+                }
+            });
         });
     });
-});
-
 </script>
         </div>
     </div>

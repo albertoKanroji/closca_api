@@ -41,7 +41,7 @@ class AutoController extends Controller
         try {
             // Buscar el auto por el VIN
             $auto = Auto::where('vin', $vin)->first();
-            $dmgDetalles = $auto->dmgDetalles;
+
             // Si se encuentra el auto, devolverlo directamente con las imágenes
             if ($auto) {
                 // Verificar si el cliente es el autorizado (id_cliente = 5)
@@ -53,20 +53,10 @@ class AutoController extends Controller
 
                 // Si el cliente está autorizado, obtener imágenes
                 $imagenes = $auto->imagenes;
-                $dmgArray = [];
-                foreach ($dmgDetalles as $dmgDetalle) {
-                    $dmgArray[] = [
-                        'id' => $dmgDetalle->id,
-                        'comentario' => $dmgDetalle->comentario,
-                        'dmg_codigo' => $dmgDetalle->dmg_codigo,
-                        'created_at' => $dmgDetalle->created_at,
-                        'updated_at' => $dmgDetalle->updated_at
-                    ];
-                }
+
                 $response = [
                     'inspecciones' => [
                         'auto' => [
-                            'DGM' => [$dmgArray],
                             'Unidad' => [
                                 'id_auto' => $auto->id_auto,
                                 'vin' => $auto->vin,
@@ -94,15 +84,15 @@ class AutoController extends Controller
                                 '_localizacion' => $auto->_localizacion,
                                 'referencia' => $auto->referencia,
                             ],
-                            // 'DMG' => [
-                            //     'dmg_codigo' => $auto->dmg_codigo,
-                            //     'dmg_clasificacion' => $auto->dmg_clasificacion,
-                            //     'dmg_descripcion' => $auto->dmg_descripcion,
-                            //     'dmg_modo' => $auto->dmg_modo,
-                            //     'dmg_maniobra' => $auto->dmg_maniobra,
-                            //     'dmg_transporte' => $auto->dmg_transporte,
-                            //     'dmg_responsable' => $auto->dmg_responsable,
-                            // ],
+                            'DMG' => [
+                                'dmg_codigo' => $auto->dmg_codigo,
+                                'dmg_clasificacion' => $auto->dmg_clasificacion,
+                                'dmg_descripcion' => $auto->dmg_descripcion,
+                                'dmg_modo' => $auto->dmg_modo,
+                                'dmg_maniobra' => $auto->dmg_maniobra,
+                                'dmg_transporte' => $auto->dmg_transporte,
+                                'dmg_responsable' => $auto->dmg_responsable,
+                            ],
                             'REPUVE' => [
                                 'rep_reparable' => $auto->rep_reparable,
                                 'rep_responsable' => $auto->rep_responsable,
